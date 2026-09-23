@@ -1,0 +1,28 @@
+.manager-page { min-height: 100vh; }
+.manager-header { width: min(calc(100% - 2rem), var(--max)); height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.manager-shell { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; padding: 4rem 0 7rem; overflow: visible; }
+.manager-intro { max-width: 760px; }
+.manager-intro h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); }
+.manager-intro > p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; }
+.manager-note { margin-top: 1.5rem; padding: 1rem; color: var(--muted); background: var(--surface-soft); border-left: 3px solid var(--accent-2); border-radius: 0 12px 12px 0; }
+.manager-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1.3rem; align-items: start; margin-top: 3rem; }
+.editor-card { padding: 1.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.editor-card h2 { margin: 0 0 1.25rem; font-size: 1.7rem; }
+.editor-card-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.editor-card-heading p { margin: -.8rem 0 1rem; color: var(--muted); font-size: .86rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+.form-grid label { display: flex; flex-direction: column; gap: .4rem; font-size: .86rem; font-weight: 700; }
+.form-grid .wide { grid-column: 1 / -1; }
+.form-grid small { color: var(--muted); font-weight: 400; }
+.form-grid input, .form-grid textarea { width: 100%; padding: .75rem .85rem; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; outline: none; resize: vertical; }
+.form-grid input:focus, .form-grid textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent); }
+.manager-products { display: grid; gap: .7rem; }
+.manager-product { display: grid; grid-template-columns: 58px 1fr auto; gap: .8rem; align-items: center; padding: .7rem; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+.manager-product img { width: 58px; height: 58px; object-fit: cover; border-radius: 9px; }
+.manager-product h3 { margin: 0 0 .15rem; font: 700 1rem "Space Grotesk", sans-serif; letter-spacing: -.02em; }
+.manager-product p { margin: 0; color: var(--muted); font-size: .82rem; }
+.remove-product { width: 38px; height: 38px; padding: 0; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; }
+.remove-product:hover { color: #ff5277; border-color: #ff5277; }
+.download-button { width: 100%; margin-top: 1rem; }
+@media (max-width: 850px) { .manager-layout { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } .form-grid .wide { grid-column: auto; } .editor-card-heading { flex-direction: column; } }
